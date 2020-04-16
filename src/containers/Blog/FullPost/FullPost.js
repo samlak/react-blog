@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from '../../axios';
+import axios from '../../../axios';
 
 import './FullPost.css';
 
@@ -32,7 +32,7 @@ class FullPost extends Component {
         if(this.props.id){
             post = <p style={{textAlign: 'center'}}>Loading...</p>;
         }
-        if(this.state.loadedPost && this.props.id === this.state.loadedPost.id){
+        if(this.state.loadedPost){
             post = (
                 <div className="FullPost">
                     <h1>{this.state.loadedPost.title}</h1>
